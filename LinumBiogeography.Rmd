@@ -5,6 +5,22 @@ date: "17/01/2019"
 output: html_document
 ---
 
+Installing last version of BioGeoBEARS from Github
+
+```{r}
+install.packages("rexpokit")
+install.packages("cladoRcpp")
+
+library(phylobase)
+library(pillar)
+library(RNeXML)
+
+library(devtools)
+devtools::install_github(repo="liamrevell/phytools") #Installing las version of phytools from Github
+
+devtools::install_github(repo="nmatzke/BioGeoBEARS") #Installing las version of BioGeoBEARS from Github
+```
+
 
 First, load the packages.
 
@@ -16,7 +32,7 @@ library(parallel)
 library(minqa)
 library(optimx)
 
-#NOTE: The BioGeoBEARS from GitHub must be installe, version 1.1.1
+#NOTE: The BioGeoBEARS from GitHub must be installed (above), version 1.1.1
 ```
 
 First, load the tree and distribution.
