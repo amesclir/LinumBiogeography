@@ -9,7 +9,8 @@ editor_options:
 
 Installing last version of BioGeoBEARS from Github
 
-```{r, echo=T}
+```{r, echo=F}
+# Only use these codes if you have not installed BioGeoBEARS
 #install.packages("rexpokit")
 #install.packages("cladoRcpp")
 
@@ -26,7 +27,7 @@ Installing last version of BioGeoBEARS from Github
 
 First, load the packages.
 
-```{r, echo=T}
+```{r, echo=F}
 library(ape)
 library(phytools)
 library(BioGeoBEARS)
@@ -39,7 +40,7 @@ library(optimx)
 
 First, load the tree and distribution.
 
-```{r, echo=T}
+```{r, echo=F}
 
 mytree1 <- read.nexus("linum.tree")
 mytree2 <- drop.tip(mytree1, c("Hypericum_perforatum", "Viola_pubescens", "Humiria_balsamifera", "Hu_busseana", "L_decumbens2", "L_aroanium2", "L_empetrifolium2", "L_tenue2", "L_mucronatum2", "L_tenuifolium2", "L_suffruticosum2"))
@@ -78,7 +79,7 @@ numstates_from_numareas(numareas=8, maxareas=8, include_null_range=TRUE)
 
 3. Ahora vamos a usar el modelo DEC
 
-```{r, echo=T}
+```{r, echo=F}
 
 #######################################################
 # Run DEC
@@ -188,7 +189,7 @@ if (runslow)
 
 4. Run DEC + J
 
-```{r, echo=T}
+```{r, echo=F}
 
 
 
@@ -275,7 +276,7 @@ if (runslow)
 
 5. Plotting the results
 
-```{r, echo=T}
+```{r, echo=F}
 
 #######################################################
 # PDF plots
@@ -314,14 +315,13 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr) # Plot it
+
 
 ```
 
 6. Run DIVA like
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE
 #######################################################
@@ -403,7 +403,7 @@ if (runslow)
 
 7. Run DIVALIKE + j
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE+J
 #######################################################
@@ -505,7 +505,7 @@ if (runslow)
 
 8. Plotting additional results
 
-```{r}
+```{r, echo=F}
 
 pdffn = "Glareosae_DIVALIKE_vs_DIVALIKE+J_M0_unconstrained_v1.pdf"
 pdf(pdffn, width=6, height=6)
@@ -541,8 +541,8 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr)
+
+
 
 ```
 
@@ -550,7 +550,7 @@ system(cmdstr)
 
 9. Comparing all results
 
-```{r}
+```{r, echo=F}
 #########################################################################
 #########################################################################
 #########################################################################
@@ -698,7 +698,7 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_AICc
 
 10. Now we are going to use the model DEC with dispersal multipliers
 
-```{r}
+```{r, echo=F}
 
 #######################################################
 # Run DEC
@@ -808,7 +808,7 @@ if (runslow)
 
 11. Run DEC + J con tasas de dispersion
 
-```{r}
+```{r, echo=F}
 
 
 
@@ -895,7 +895,7 @@ if (runslow)
 
 12. Plotting the results with dispesal rates
 
-```{r}
+```{r, echo=F}
 
 #######################################################
 # PDF plots
@@ -934,14 +934,14 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr) # Plot it
+
+ # Plot it
 
 ```
 
 13. Run DIVA like with dispersal rates
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE
 #######################################################
@@ -1023,7 +1023,7 @@ if (runslow)
 
 14. Run DIVALIKE + j with dispersal rates
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE+J
 #######################################################
@@ -1125,7 +1125,7 @@ if (runslow)
 
 15. Plotting additional results with dispersal rates
 
-```{r}
+```{r, echo=F}
 
 pdffn = "Glareosae_DIVALIKE_vs_DIVALIKE+J_M0_constrained_v1.pdf"
 pdf(pdffn, width=6, height=6)
@@ -1161,15 +1161,15 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr)
+
+
 
 ```
 
 
 16. Comparing all results with dispersal rates
 
-```{r}
+```{r, echo=F}
 #########################################################################
 #########################################################################
 #########################################################################
@@ -1314,7 +1314,7 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_AICc
 
 17. Now we are going to use the model DEC with dispersal multipliers bis
 
-```{r}
+```{r, echo=F}
 
 #######################################################
 # Run DEC
@@ -1424,7 +1424,7 @@ if (runslow)
 
 18. Run DEC + J con tasas de dispersion bis
 
-```{r}
+```{r, echo=F}
 
 
 
@@ -1511,7 +1511,7 @@ if (runslow)
 
 19. Plotting the results with dispesal rates
 
-```{r}
+```{r, echo=F}
 
 #######################################################
 # PDF plots
@@ -1550,14 +1550,14 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr) # Plot it
+
+ # Plot it
 
 ```
 
 20. Run DIVA like with dispersal rates bis
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE
 #######################################################
@@ -1639,7 +1639,7 @@ if (runslow)
 
 21. Run DIVALIKE + j with dispersal rates bis
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE+J
 #######################################################
@@ -1741,7 +1741,7 @@ if (runslow)
 
 22. Plotting additional results with dispersal rates bis
 
-```{r}
+```{r, echo=F}
 
 pdffn = "Glareosae_DIVALIKE_vs_DIVALIKE+J_M0_constrained_b_v1.pdf"
 pdf(pdffn, width=6, height=6)
@@ -1777,15 +1777,15 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr)
+
+
 
 ```
 
 
 23. Comparing all results with dispersal rates bis
 
-```{r}
+```{r, echo=F}
 #########################################################################
 #########################################################################
 #########################################################################
@@ -1930,7 +1930,7 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_AICc
 
 24. Now we are going to use the model DEC with dispersal multipliers and time periods
 
-```{r}
+```{r, echo=F}
 
 #######################################################
 # Run DEC
@@ -2040,7 +2040,7 @@ if (runslow)
 
 25. Run DEC + J with distance multipliers and time periods
 
-```{r}
+```{r, echo=F}
 
 
 
@@ -2127,7 +2127,7 @@ if (runslow)
 
 26. Plotting the results with dispesal rates and time periods
 
-```{r}
+```{r, echo=F}
 
 #######################################################
 # PDF plots
@@ -2166,14 +2166,14 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr) # Plot it
+
+ # Plot it
 
 ```
 
 27. Run DIVA like with dispersal rates and time periods
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE
 #######################################################
@@ -2255,7 +2255,7 @@ if (runslow)
 
 28. Run DIVALIKE + j with dispersal rates and time periods
 
-```{r}
+```{r, echo=F}
 #######################################################
 # Run DIVALIKE+J
 #######################################################
@@ -2357,7 +2357,7 @@ if (runslow)
 
 29. Plotting additional results with dispersal rates and time periods
 
-```{r}
+```{r, echo=F}
 
 pdffn = "Glareosae_DIVALIKE_vs_DIVALIKE+J_M0_constrained2_v1.pdf"
 pdf(pdffn, width=6, height=6)
@@ -2393,15 +2393,15 @@ res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr)
+
+
 
 ```
 
 
 30. Comparing all results with dispersal rates and time periods
 
-```{r}
+```{r, echo=F}
 #########################################################################
 #########################################################################
 #########################################################################
@@ -2548,7 +2548,7 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_AICc
 
 31. Setting packages and sources for multiples trees analyses
 
-```{r}
+```{r, echo=F}
 ###########################################################
 # Run Biogeobears on multiple trees and store the output 
 ###########################################################
@@ -2597,7 +2597,7 @@ calc_independent_likelihoods_on_each_branch = compiler::cmpfun(calc_independent_
 
 32. Setting files for multiple trees analyses
 
-```{r}
+```{r, echo=F}
 
 
 newick_fns = read.nexus("tree.trees")
@@ -2707,7 +2707,7 @@ numstates_from_numareas(numareas=5, maxareas=5, include_null_range=FALSE)
 33. Running DEC on multiples trees
 
 
-```{r}
+```{r, echo=F}
 
 
 #######################################################
@@ -2849,7 +2849,7 @@ if (runslow)
 34. ANALYSES WITH MULTIPLE TREES DOWNLOADED FROM THE GOOGLE GROUP
 WE HAVE SET THE ANALYSES USING COMMANDS FROM NUMBER 33 BUT THE FINAL RUN IS DONE HERE.
 
-```{r}
+```{r, echo=F}
 
 ###########################################################
 # Run BioGeoBEARS on multiple trees and store the output 
@@ -3027,8 +3027,8 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 
 
 dev.off()  # Turn off PDF
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr) # Plot it
+
+ # Plot it
 
 
 
@@ -3137,7 +3137,7 @@ system(cmdstr) # Plot it
 
 35. BAYESIAN STOCHASTIC MAPPING
 
-```{r}
+```{r, echo=F}
 
 
 # Load the package (after installation, see above).
@@ -3463,8 +3463,8 @@ res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=l
 plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.45, tipcex=0.7, statecex=0.7, splitcex=0.6, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr) # Plot it
+
+ # Plot it
 
 #######################################################
 # Stochastic mapping on DEC M3b stratified with islands coming up
@@ -3588,7 +3588,7 @@ plot_BioGeoBEARS_results(results_object=resmod, analysis_titletxt="Stochastic ma
 ############################################
 dev.off()
 cmdstr = paste("xdg-open ", pdffn, sep="")
-system(cmdstr)
+
 
 #######################################################
 # Plot all 50 stochastic maps to PDF
@@ -3616,8 +3616,8 @@ for (i in 1:nummaps_goal)
     } # END for (i in 1:nummaps_goal)
 
 dev.off()
-cmdstr = paste("open ", pdffn, sep="")
-system(cmdstr)
+
+
 
 #######################################################
 # Summarize stochastic map tables
