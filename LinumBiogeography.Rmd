@@ -3,28 +3,30 @@ title: "LinumBiogeography"
 author: "amesclir & emagasal"
 date: "17/01/2019"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 Installing last version of BioGeoBEARS from Github
 
-```{r}
-install.packages("rexpokit")
-install.packages("cladoRcpp")
+```{r, echo=T}
+#install.packages("rexpokit")
+#install.packages("cladoRcpp")
 
-library(phylobase)
-library(pillar)
-library(RNeXML)
+#library(phylobase)
+#library(pillar)
+#library(RNeXML)
 
-library(devtools)
-devtools::install_github(repo="liamrevell/phytools") #Installing las version of phytools from Github
+#library(devtools)
+#devtools::install_github(repo="liamrevell/phytools") #Installing las version of phytools from Github
 
-devtools::install_github(repo="nmatzke/BioGeoBEARS") #Installing las version of BioGeoBEARS from Github
+#devtools::install_github(repo="nmatzke/BioGeoBEARS") #Installing las version of BioGeoBEARS from Github
 ```
 
 
 First, load the packages.
 
-```{r}
+```{r, echo=T}
 library(ape)
 library(phytools)
 library(BioGeoBEARS)
@@ -37,7 +39,7 @@ library(optimx)
 
 First, load the tree and distribution.
 
-```{r}
+```{r, echo=T}
 
 mytree1 <- read.nexus("linum.tree")
 mytree2 <- drop.tip(mytree1, c("Hypericum_perforatum", "Viola_pubescens", "Humiria_balsamifera", "Hu_busseana", "L_decumbens2", "L_aroanium2", "L_empetrifolium2", "L_tenue2", "L_mucronatum2", "L_tenuifolium2", "L_suffruticosum2"))
@@ -76,7 +78,7 @@ numstates_from_numareas(numareas=8, maxareas=8, include_null_range=TRUE)
 
 3. Ahora vamos a usar el modelo DEC
 
-```{r}
+```{r, echo=T}
 
 #######################################################
 # Run DEC
@@ -186,7 +188,7 @@ if (runslow)
 
 4. Run DEC + J
 
-```{r}
+```{r, echo=T}
 
 
 
@@ -273,7 +275,7 @@ if (runslow)
 
 5. Plotting the results
 
-```{r}
+```{r, echo=T}
 
 #######################################################
 # PDF plots
