@@ -262,13 +262,13 @@ if (runslow)
 #######################################################
 # PDF plots
 #######################################################
-pdffn = "Glareosae_DEC_vs_DEC+J_M0_unconstrained_v1.pdf"
+pdffn = "Linum_DEC_vs_DEC+J_M0_unconstrained_v1.pdf"
 pdf(pdffn, width=6, height=6)
 
 #######################################################
 # Plot ancestral states - DEC
 #######################################################
-analysis_titletxt ="BioGeoBEARS DEC on Glareosae M0_unconstrained"
+analysis_titletxt ="BioGeoBEARS DEC on Linum M0_unconstrained"
 
 # Setup
 results_object = resDEC
@@ -283,7 +283,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 #######################################################
 # Plot ancestral states - DECJ
 #######################################################
-analysis_titletxt ="BioGeoBEARS DEC+J on Glareosae M0_unconstrained"
+analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_unconstrained"
 
 # Setup
 results_object = resDECj
