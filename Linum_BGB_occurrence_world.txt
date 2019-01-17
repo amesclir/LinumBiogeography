@@ -1,4 +1,4 @@
-103	11 (A E F G H I J K)
+103	8 (A B C D E F G H)
 A_pubescens	01000000
 C_selaginoides	00000010
 He_micranthum	00001000
