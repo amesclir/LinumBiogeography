@@ -121,7 +121,7 @@ Begin taxa;
 End;
 Begin trees;
 	Translate
-		   1 L_virgatum,
+		   1 L_flos-carmini,
 		   2 A_pubescens,
 		   3 C_selaginoides,
 		   4 He_micranthum,
@@ -200,7 +200,7 @@ Begin trees;
 		  77 L_rupestre,
 		  78 L_seljukorum,
 		  79 L_setaceum,
-		  80 L_flos-carmini,
+		  80 L_setaceum_Het,
 		  81 L_spathulatum,
 		  82 L_stelleroides,
 		  83 L_striatum,
@@ -216,7 +216,7 @@ Begin trees;
 		  93 L_tenuifolium1,
 		  94 L_tenuifolium2,
 		  95 L_thesioides,
-		  96 L_thunbergii,
+		  96 L_thumbergii,
 		  97 L_tmoleum,
 		  98 L_tommasinii,
 		  99 L_triflorum,

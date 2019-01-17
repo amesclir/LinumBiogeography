@@ -12,6 +12,8 @@ library(ape)
 mytree1 <- read.nexus("linum.tree")
 mytree2 <- drop.tip(mytree1, c("Hypericum_perforatum", "Viola_pubescens", "Humiria_balsamifera", "Hu_busseana", "L_decumbens2", "L_aroanium2", "L_empetrifolium2", "L_tenue2", "L_mucronatum2", "L_tenuifolium2", "L_suffruticosum2"))
 
+write.tree(mytree2, "tree.tree")
+
 ```
 
 
@@ -25,10 +27,9 @@ library(optimx)
 library(FD)
 library(snow)
 library(parallel)
+
 library(BioGeoBEARS)
-
-source("http://phylo.wdfiles.com/local--files/biogeobears/cladoRcpp.R") 
-
+source("http://phylo.wdfiles.com/local--files/biogeobears/cladoRcpp.R") # (needed now that traits model added; source FIRST!)
 source("http://phylo.wdfiles.com/local--files/biogeobears/BioGeoBEARS_add_fossils_randomly_v1.R")
 source("http://phylo.wdfiles.com/local--files/biogeobears/BioGeoBEARS_basics_v1.R")
 source("http://phylo.wdfiles.com/local--files/biogeobears/BioGeoBEARS_calc_transition_matrices_v1.R")
@@ -53,6 +54,7 @@ source("http://phylo.wdfiles.com/local--files/biogeobears/get_stratified_subbran
 source("http://phylo.wdfiles.com/local--files/biogeobears/runBSM_v1.R")
 source("http://phylo.wdfiles.com/local--files/biogeobears/stochastic_map_given_inputs.R")
 source("http://phylo.wdfiles.com/local--files/biogeobears/summarize_BSM_tables_v1.R")
+source("http://phylo.wdfiles.com/local--files/biogeobears/BioGeoBEARS_traits_v1.R") # added traits model
 calc_loglike_sp = compiler::cmpfun(calc_loglike_sp_prebyte)    # crucial to fix bug in uppass calculations
 calc_independent_likelihoods_on_each_branch = compiler::cmpfun(calc_independent_likelihoods_on_each_branch_prebyte)
     # slight speedup hopefully
@@ -63,26 +65,16 @@ First, load the tree and distribution.
 
 ```{r}
 
-tr = read.nexus("tree.tree")
-tr
-tipstoremove <- c("Cremota","Cspicata", "Cpaniculata", "Celongata", "Cscoparia", "Cmerritt-fernaldi", "Cbolanderi", "Cleptopoda", "Cdeweyana", "Cbromoides", "Cchordorrhyza")
-tr = drop.tip (tr, tipstoremove)
-plot(tr, cex = 0.8)
-title("Example Glareosae phylogeny")
-axisPhylo()
-
-write.tree(tr, file = "glareosae.tree")
-
-tr = read.tree("glareosae.tree")
+tr = read.tree("tree.tree")
 tr
 plot(tr, cex = 0.8)
-title("Example Glareosae phylogeny")
+title("Example Linum phylogeny")
 axisPhylo()
 
-trfn = np("glareosae.tree")
+trfn = np("tree.tree")
 moref(trfn)
 
-geogfn = np("glareosae.data")
+geogfn = np("Linum_BGB_occurrence_world.txt")
 #extdata_dir = np(system.file("extdata", package="BioGeoBEARS"))
 #extdata_dir
 #list.files(extdata_dir)
@@ -95,10 +87,10 @@ moref(geogfn)
 tipranges = getranges_from_LagrangePHYLIP(lgdata_fn=geogfn)
 tipranges
 
-max_range_size = 5
+max_range_size = 4
 
-numstates_from_numareas(numareas=5, maxareas=5, include_null_range=TRUE)
-numstates_from_numareas(numareas=5, maxareas=5, include_null_range=FALSE)
+numstates_from_numareas(numareas=8, maxareas=4, include_null_range=TRUE)
+numstates_from_numareas(numareas=8, maxareas=4, include_null_range=FALSE)
 
 
 ```
@@ -195,7 +187,7 @@ check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 # For a slow analysis, run once, then set runslow=FALSE to just 
 # load the saved result.
 runslow = TRUE
-resfn = "Glareosae_DEC_M0_unconstrained_v1.Rdata"
+resfn = "Linum_DEC_M0_unconstrained_v1.Rdata"
 if (runslow)
     {
     res = bears_optim_run(BioGeoBEARS_run_object)
@@ -280,7 +272,7 @@ check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
 # For a slow analysis, run once, then set runslow=FALSE to just 
 # load the saved result.
-resfn = "Glareosae_DEC+J_M0_unconstrained_v1.Rdata"
+resfn = "Linum_DEC+J_M0_unconstrained_v1.Rdata"
 runslow = TRUE
 if (runslow)
     {
@@ -412,7 +404,7 @@ BioGeoBEARS_run_object$BioGeoBEARS_model_object@params_table["mx01v","est"] = 0.
 check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
 runslow = TRUE
-resfn = "Glareosae_DIVALIKE_M0_unconstrained_v1.Rdata"
+resfn = "Linum_DIVALIKE_M0_unconstrained_v1.Rdata"
 if (runslow)
     {
     res = bears_optim_run(BioGeoBEARS_run_object)
