@@ -1,10 +1,7 @@
-115	11 (A B C D E F G H I J K)
+103	11 (A B C D E F G H I J K)
 A_pubescens	00001000000
 C_selaginoides	00000000010
 He_micranthum	00000001000
-Hu_busseana	00000100000
-Humiria_balsamifera	00000000010
-Hypericum_perforatum	11111111111
 L_acuticarpum	00000010000
 L_adustum	00000010000
 L_aethiopicum	00000010000
@@ -14,7 +11,6 @@ L_alpinum	11000000000
 L_arboreum	01000000000
 L_aretioides	01000000000
 L_aroanium1	01000000000
-L_aroanium2	01000000000
 L_austr_gomaricum	00010000000
 L_austr_mauritanicum	00010000000
 L_austriacum	11010000000
@@ -29,12 +25,10 @@ L_comptonii	00000010000
 L_corymbiferum	00010000000
 L_corymbulosum	01000000000
 L_decumbens1	10000000000
-L_decumbens2	10000000000
 L_densiflorum1	00100000000
 L_densiflorum2	01000000000
 L_elegans	01000000000
 L_empetrifolium1	01000000000
-L_empetrifolium2	01000000000
 L_esterhuysenae	00000010000
 L_flavum	11000000000
 L_flos-carmini	00010000000
@@ -57,7 +51,6 @@ L_marginale	00000000001
 L_maritimum	10000000000
 L_meletonis	01000000000
 L_mucronatum1	01000000000
-L_mucronatum2	01000000000
 L_mumbyanum	00010000000
 L_narbonense	10000000000
 L_nervosum	01000000000
@@ -84,14 +77,11 @@ L_striatum	00000001000
 L_strictum	11110001101
 L_subasperifolium	00010000000
 L_suffruticosum1	10000000000
-L_suffruticosum2	10000000000
 L_syriacum	00100000000
 L_tauricum	01000000000
 L_tenue1	00010000000
-L_tenue2	00010000000
 L_tenue3	00010000000
-L_tenuifolium1	10000000000
-L_tenuifolium2	01000000000
+L_tenuifolium1	11000000000
 L_thesioides	00000010000
 L_thunbergii	00000010000
 L_tmoleum	01000000000
@@ -109,7 +99,6 @@ L_virgultorum	01000000000
 L_viscosum	10000000000
 L_volkensii	00000100000
 Ra_linoides	11000101001
-Re_indica	01000000000
+Re_indica	01001001001
 S_digynum	00000001000
 T_sinensis	00001000000
-Viola_pubescens	00000001000

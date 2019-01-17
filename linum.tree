@@ -3,7 +3,7 @@
 Begin taxa;
 	Dimensions ntax=114;
 		Taxlabels
-			606 
+			L_flos-carmini 
 			A_pubescens 
 			C_selaginoides 
 			He_micranthum 
@@ -121,7 +121,7 @@ Begin taxa;
 End;
 Begin trees;
 	Translate
-		   1 606,
+		   1 L_flos-carmini,
 		   2 A_pubescens,
 		   3 C_selaginoides,
 		   4 He_micranthum,

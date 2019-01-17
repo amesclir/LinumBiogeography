@@ -1,4 +1,4 @@
-79	4 (A B C D)
+72	4 (A B C D)
 L_catharticum	1100
 L_densiflorum1	0010
 L_densiflorum2	0100
@@ -22,17 +22,13 @@ L_setaceum	1001
 L_strictum	1111
 L_subasperifolium	0001
 L_suffruticosum1	1000
-L_suffruticosum2	1000
 L_tenue1	0001
-L_tenue2	0001
 L_tenue3	0001
-L_tenuifolium1	1000
-L_tenuifolium2	0100
+L_tenuifolium1	1100
 L_trigynum	1101
 L_virgatum	0001
 L_alpinum	1100
 L_aroanium1	0100
-L_aroanium2	0100
 L_austriacum	1101
 L_austr_gomaricum	0001
 L_austr_mauritanicum	0001
@@ -41,7 +37,6 @@ L_bungei	0100
 L_decumbens1	1000
 L_decumbens2	1000
 L_empetrifolium1	0100
-L_empetrifolium2	0100
 L_grandiflorum	0001
 L_hologynum	0100
 L_lanuginosum	0100
@@ -69,7 +64,6 @@ L_elegans	0100
 L_flavum	1100
 L_gyaricum	0100
 L_mucronatum1	0100
-L_mucronatum2	0100
 L_nodiflorum	1100
 L_syriacum	0010
 L_tauricum	0100
@@ -77,4 +71,3 @@ L_triflorum	0100
 L_velutinum	0010
 Ra_linoides	1100
 Re_indica	0100
-Hypericum_perforatum	1111
