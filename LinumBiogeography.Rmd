@@ -482,7 +482,7 @@ BioGeoBEARS_run_object$BioGeoBEARS_model_object@params_table["j","max"] = 1.9999
 
 check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
-resfn = "Glareosae_DIVALIKE+J_M0_unconstrained_v1.Rdata"
+resfn = "Linum_DIVALIKE+J_M0_unconstrained_v1.Rdata"
 runslow = TRUE
 if (runslow)
     {
@@ -507,13 +507,13 @@ if (runslow)
 
 ```{r, echo=F}
 
-pdffn = "Glareosae_DIVALIKE_vs_DIVALIKE+J_M0_unconstrained_v1.pdf"
+pdffn = "Linum_DIVALIKE_vs_DIVALIKE+J_M0_unconstrained_v1.pdf"
 pdf(pdffn, width=6, height=6)
 
 #######################################################
 # Plot ancestral states - DIVALIKE
 #######################################################
-analysis_titletxt ="BioGeoBEARS DIVALIKE on Glareosae M0_unconstrained"
+analysis_titletxt ="BioGeoBEARS DIVALIKE on Linum M0_unconstrained"
 
 # Setup
 results_object = resDIVALIKE
@@ -528,7 +528,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 #######################################################
 # Plot ancestral states - DIVALIKE+J
 #######################################################
-analysis_titletxt ="Glareosae DIVALIKE+J on Psychotria M0_unconstrained"
+analysis_titletxt ="Linum DIVALIKE+J on Linum M0_unconstrained"
 
 # Setup
 results_object = resDIVALIKEj
@@ -663,7 +663,7 @@ write.table(restable, file="restable.txt", quote=FALSE, sep="\t")
 write.table(unlist_df(teststable), file="teststable.txt", quote=FALSE, sep="\t")
 
 #######################################################
-# Model weights of all six models
+# Model weights of all four models
 #######################################################
 restable2 = restable
 
@@ -693,6 +693,9 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_AICc
 
 ```
 
+
+END OF THE FIRST APPROACH. DEC, DEC+J, DIVALIKE and DIVALIKE+J without dispersal multipliers.
+0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
 
 
 
