@@ -19,9 +19,9 @@ Installing last version of BioGeoBEARS from Github
 #library(RNeXML)
 
 #library(devtools)
-#devtools::install_github(repo="liamrevell/phytools") #Installing las version of phytools from Github
+#devtools::install_github(repo="liamrevell/phytools") #Installing last version of phytools from Github
 
-#devtools::install_github(repo="nmatzke/BioGeoBEARS") #Installing las version of BioGeoBEARS from Github
+#devtools::install_github(repo="nmatzke/BioGeoBEARS") #Installing last version of BioGeoBEARS from Github
 ```
 
 
