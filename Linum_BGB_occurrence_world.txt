@@ -1,4 +1,4 @@
-103	8 (A B C D E F G H)
+103	8 (Med AS CAf SAf NAm CAm SAm AU)
 A_pubescens	01000000
 C_selaginoides	00000010
 He_micranthum	00001000

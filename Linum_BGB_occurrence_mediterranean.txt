@@ -1,4 +1,4 @@
-103	11 (A B C D E F G H I J K)
+103	11 (WMed EMed Arab NAf AS CAf SAf NAm CAm SAm AU)
 A_pubescens	00001000000
 C_selaginoides	00000000010
 He_micranthum	00000001000
