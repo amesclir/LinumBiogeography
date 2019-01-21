@@ -282,7 +282,7 @@ if (runslow)
 # PDF plots
 #######################################################
 pdffn = "Linum_DEC_vs_DEC+J_M0_unconstrained_v1.pdf"
-pdf(pdffn, width=6, height=6)
+pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DEC
@@ -294,10 +294,10 @@ results_object = resDEC
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 #######################################################
 # Plot ancestral states - DECJ
@@ -309,10 +309,10 @@ results_object = resDECj
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
 
@@ -509,7 +509,7 @@ if (runslow)
 ```{r, echo=F}
 
 pdffn = "Linum_DIVALIKE_vs_DIVALIKE+J_M0_unconstrained_v1.pdf"
-pdf(pdffn, width=6, height=6)
+pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DIVALIKE
@@ -521,10 +521,10 @@ results_object = resDIVALIKE
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 #######################################################
 # Plot ancestral states - DIVALIKE+J
@@ -536,10 +536,10 @@ results_object = resDIVALIKEj
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()
 
@@ -818,8 +818,6 @@ if (runslow)
 ```
 
 
-END 18.01.2019-------------------
-
 
 11. Run DEC + J con tasas de dispersion
 
@@ -840,7 +838,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 
 # Set up a time-stratified analysis:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = "areas_adjacency.txt"
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -923,7 +921,7 @@ if (runslow)
 # PDF plots
 #######################################################
 pdffn = "Linum_DEC_vs_DEC+J_M0_constrained_w.pdf"
-pdf(pdffn, width=6, height=6)
+pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DEC
@@ -935,10 +933,10 @@ results_object = resDECc
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 #######################################################
 # Plot ancestral states - DECJ
@@ -950,10 +948,10 @@ results_object = resDECjc
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()  # Turn off PDF
 
@@ -977,7 +975,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 
 # Set up a time-stratified analysis:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = "areas_adjacency.txt"
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -1066,7 +1064,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 
 # Set up a time-stratified analysis:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = "areas_adjacency.txt"
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -1164,7 +1162,7 @@ if (runslow)
 ```{r, echo=F}
 
 pdffn = "Linum_DIVALIKE_vs_DIVALIKE+J_M0_constrained_w.pdf"
-pdf(pdffn, width=6, height=6)
+pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DIVALIKE
@@ -1176,10 +1174,10 @@ results_object = resDIVALIKEc
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 #######################################################
 # Plot ancestral states - DIVALIKE+J
@@ -1191,16 +1189,17 @@ results_object = resDIVALIKEjc
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.75, tipcex=0.3, statecex=0.3, splitcex=0.3, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.75, tipcex=0.3, statecex=0.5, splitcex=0.5, titlecex=0.8, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
 
 dev.off()
 
 
 
 ```
+
 
 
 16. Comparing all results with dispersal rates
