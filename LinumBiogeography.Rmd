@@ -2036,7 +2036,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 #
 # Uncomment files you wish to use in time-stratified analyses:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers_bis.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = areasadjacency
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -2102,7 +2102,7 @@ check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 # For a slow analysis, run once, then set runslow=FALSE to just 
 # load the saved result.
 runslow = TRUE
-resfn = "Linum_DEC_M0_constrained_w.Rdata"
+resfn = "Linum_DEC_M0_constrained_w_v2.Rdata"
 if (runslow)
     {
     res = bears_optim_run(BioGeoBEARS_run_object)
@@ -2122,7 +2122,7 @@ if (runslow)
 
 
 
-11. Run DEC + J con tasas de dispersion
+25. Run DEC + J con tasas de dispersion
 
 ```{r, echo=F}
 
@@ -2141,7 +2141,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 
 # Set up a time-stratified analysis:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers_bis.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = "areas_adjacency.txt"
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -2196,7 +2196,7 @@ check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
 # For a slow analysis, run once, then set runslow=FALSE to just 
 # load the saved result.
-resfn = "Linum_DEC+J_M0_constrained_w.Rdata"
+resfn = "Linum_DEC+J_M0_constrained_w_v2.Rdata"
 runslow = TRUE
 if (runslow)
     {
@@ -2216,20 +2216,20 @@ if (runslow)
 ```
 
 
-12. Plotting the results with dispesal rates
+26. Plotting the results with dispesal rates
 
 ```{r, echo=F}
 
 #######################################################
 # PDF plots
 #######################################################
-pdffn = "Linum_DEC_vs_DEC+J_M0_constrained_w.pdf"
+pdffn = "Linum_DEC_vs_DEC+J_M0_constrained_w_v2.pdf"
 pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DEC
 #######################################################
-analysis_titletxt ="BioGeoBEARS DEC on Linum M0_constrained"
+analysis_titletxt ="BioGeoBEARS DEC on Linum M0_constrained_v2"
 
 # Setup
 results_object = resDECc
@@ -2244,7 +2244,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 #######################################################
 # Plot ancestral states - DECJ
 #######################################################
-analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_constrained"
+analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_constrained_v2"
 
 # Setup
 results_object = resDECjc
@@ -2262,7 +2262,7 @@ dev.off()  # Turn off PDF
 
 ```
 
-13. Run DIVA like with dispersal rates
+27. Run DIVA like with dispersal rates
 
 ```{r, echo=F}
 #######################################################
@@ -2278,7 +2278,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 
 # Set up a time-stratified analysis:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers_bis.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = "areas_adjacency.txt"
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -2335,7 +2335,7 @@ BioGeoBEARS_run_object$BioGeoBEARS_model_object@params_table["w","max"] = 3
 check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
 runslow = TRUE
-resfn = "Linum_DIVALIKE_M0_constrained_w.Rdata"
+resfn = "Linum_DIVALIKE_M0_constrained_w_v2.Rdata"
 if (runslow)
     {
     res = bears_optim_run(BioGeoBEARS_run_object)
@@ -2351,7 +2351,7 @@ if (runslow)
 
 ```
 
-14. Run DIVALIKE + j with dispersal rates
+28. Run DIVALIKE + j with dispersal rates
 
 ```{r, echo=F}
 #######################################################
@@ -2367,7 +2367,7 @@ BioGeoBEARS_run_object$include_null_range = TRUE    # set to FALSE for e.g. DEC*
 
 # Set up a time-stratified analysis:
 BioGeoBEARS_run_object$timesfn = "timeperiods.txt"
-BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers.txt"
+BioGeoBEARS_run_object$dispersal_multipliers_fn = "Linum_BGB_manual_dispersal_multipliers_bis.txt"
 #BioGeoBEARS_run_object$areas_allowed_fn = "areas_allowed.txt"
 #BioGeoBEARS_run_object$areas_adjacency_fn = "areas_adjacency.txt"
 #BioGeoBEARS_run_object$distsfn = "distances_matrix.txt"
@@ -2439,7 +2439,7 @@ BioGeoBEARS_run_object$BioGeoBEARS_model_object@params_table["w","max"] = 3
 
 check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
-resfn = "Linum_DIVALIKE+J_M0_constrained_w.Rdata"
+resfn = "Linum_DIVALIKE+J_M0_constrained_w_v2.Rdata"
 runslow = TRUE
 if (runslow)
     {
@@ -2460,17 +2460,17 @@ if (runslow)
 
 ```
 
-15. Plotting additional results with dispersal rates
+29. Plotting additional results with dispersal rates
 
 ```{r, echo=F}
 
-pdffn = "Linum_DIVALIKE_vs_DIVALIKE+J_M0_constrained_w.pdf"
+pdffn = "Linum_DIVALIKE_vs_DIVALIKE+J_M0_constrained_w_v2.pdf"
 pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DIVALIKE
 #######################################################
-analysis_titletxt ="BioGeoBEARS DIVALIKE on Linum M0_constrained"
+analysis_titletxt ="BioGeoBEARS DIVALIKE on Linum M0_constrained_v2"
 
 # Setup
 results_object = resDIVALIKEc
@@ -2485,7 +2485,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 #######################################################
 # Plot ancestral states - DIVALIKE+J
 #######################################################
-analysis_titletxt ="BioGeoBEARS DIVALIKE+J on Linum M0_constrained"
+analysis_titletxt ="BioGeoBEARS DIVALIKE+J on Linum M0_constrained_v2"
 
 # Setup
 results_object = resDIVALIKEjc
@@ -2505,7 +2505,7 @@ dev.off()
 
 
 
-16. Comparing all results with dispersal rates
+30. Comparing all results with dispersal rates
 
 ```{r, echo=F}
 #########################################################################
@@ -2607,16 +2607,16 @@ teststable
 #######################################################
 
 # Loads to "restable"
-save(restable, file="restable_wc.Rdata")
-load(file="restable_wc.Rdata")
+save(restable, file="restable_wc_v2.Rdata")
+load(file="restable_wc_v2.Rdata")
 
 # Loads to "teststable"
-save(teststable, file="teststable_wc.Rdata")
+save(teststable, file="teststable_wc_v2.Rdata")
 load(file="teststable_wc.Rdata")
 
 # Also save to text files
-write.table(restable, file="restablewc.txt", quote=FALSE, sep="\t")
-write.table(unlist_df(teststable), file="teststablewc.txt", quote=FALSE, sep="\t")
+write.table(restable, file="restablewc_v2.txt", quote=FALSE, sep="\t")
+write.table(unlist_df(teststable), file="teststablewc_v2.txt", quote=FALSE, sep="\t")
 
 #######################################################
 # Model weights of all six models
@@ -2639,15 +2639,18 @@ free_params = row.names(resDECj$output@params_table[resDECj$output@params_table$
 names(restable_AICc_rellike) = c("LnL", "numparams", free_params, "AICc", "AICc_wt")
 
 # Also save to text files
-write.table(restable_AIC_rellike, file="restablew_AIC_rellikec.txt", quote=FALSE, sep="\t")
-write.table(restable_AICc_rellike, file="restablew_AICc_rellikec.txt", quote=FALSE, sep="\t")
+write.table(restable_AIC_rellike, file="restablew_AIC_rellikec_v2.txt", quote=FALSE, sep="\t")
+write.table(restable_AICc_rellike, file="restablew_AICc_rellikec_v2.txt", quote=FALSE, sep="\t")
 
 # Save with nice conditional formatting
-write.table(conditional_format_table(restable_AIC_rellike), file="restablew_AIC_rellike_formattedc.txt", quote=FALSE, sep="\t")
-write.table(conditional_format_table(restable_AICc_rellike), file="restablew_AICc_rellike_formattedc.txt", quote=FALSE, sep="\t")
+write.table(conditional_format_table(restable_AIC_rellike), file="restablew_v2_AIC_rellike_formattedc.txt", quote=FALSE, sep="\t")
+write.table(conditional_format_table(restable_AICc_rellike), file="restablew_v2_AICc_rellike_formattedc.txt", quote=FALSE, sep="\t")
 
 
 ```
+
+
+0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
 
 
 
