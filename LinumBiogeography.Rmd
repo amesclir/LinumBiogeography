@@ -2795,9 +2795,8 @@ if (runslow)
 
 ```
 
---22.01.2019--
 
-4. Run DEC + J
+32. Run DEC + J
 
 ```{r, echo=F}
 
@@ -2864,7 +2863,7 @@ check_BioGeoBEARS_run(BioGeoBEARS_run_object)
 
 # For a slow analysis, run once, then set runslow=FALSE to just 
 # load the saved result.
-resfn = "Linum_DEC+J_M0_unconstrained_v1.Rdata"
+resfn = "Linum_DEC+J_M0_unconstrained_mediterranean.Rdata"
 runslow = TRUE
 if (runslow)
     {
@@ -2884,20 +2883,20 @@ if (runslow)
 ```
 
 
-5. Plotting the results
+33. Plotting the results
 
 ```{r, echo=F}
 
 #######################################################
 # PDF plots
 #######################################################
-pdffn = "Linum_DEC_vs_DEC+J_M0_unconstrained_v1.pdf"
+pdffn = "Linum_DEC_vs_DEC+J_M0_unconstrained_mediterranean.pdf"
 pdf(pdffn, width=7, height=9)
 
 #######################################################
 # Plot ancestral states - DEC
 #######################################################
-analysis_titletxt ="BioGeoBEARS DEC on Linum M0_unconstrained"
+analysis_titletxt ="BioGeoBEARS DEC on Linum M0_unconstrained_Mediterranean"
 
 # Setup
 results_object = resDEC
@@ -2912,7 +2911,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 #######################################################
 # Plot ancestral states - DECJ
 #######################################################
-analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_unconstrained"
+analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_unconstrained_Mediterranean"
 
 # Setup
 results_object = resDECj

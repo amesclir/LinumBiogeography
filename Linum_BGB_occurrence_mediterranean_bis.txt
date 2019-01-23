@@ -74,7 +74,7 @@ L_setaceum	100100000
 L_spathulatum	010000000
 L_stelleroides	000010000
 L_striatum	000000100
-L_strictum	111100111
+L_strictum	111101101
 L_subasperifolium	000100000
 L_suffruticosum1	100000000
 L_syriacum	001000000
@@ -89,7 +89,7 @@ L_tommasinii	100000000
 L_triflorum	010000000
 L_trigynum	110101001
 L_unguiculatum	010000000
-L_usitatissimum	111111111
+L_usitatissimum	111100000
 L_velutinum	001000000
 L_vernale	000000100
 L_villarianum	000100000
