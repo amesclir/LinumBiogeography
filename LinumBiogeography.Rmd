@@ -3523,6 +3523,7 @@ if (runslow)
 ```
 
 
+
 40. Plotting the results with dispesal rates
 
 ```{r, echo=F}
@@ -3568,6 +3569,9 @@ dev.off()  # Turn off PDF
  # Plot it
 
 ```
+
+
+27.01.2019-------------------
 
 41. Run DIVA like with dispersal rates
 
