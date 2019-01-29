@@ -3307,8 +3307,6 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_medi
 
 End of the first approach: DEC, DEC+J, DIVALIKE and DIVALIKE+J without dispersal multipliers.
 
-----24.01.2019-------
-
 
 38. Now we are going to use the model DEC with dispersal multipliers allowing the dispersal matrix to be modified by extra parameter -w
 
