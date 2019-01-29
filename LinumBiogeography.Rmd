@@ -1353,6 +1353,7 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restablew_AIC
 
 Now we will perform the same analyses with less biogeographical areas (Mediterranean - Med, Bubsaharian-Africa - AF, Assia-Far East including India, China, Japan... - AS, Australia and New Zealand - AU, North America - NAm, South America - SAm)
 
+We think these further analyses are the most appropriate. Thus, we can discard previous analyses and keeping those below:
 
 
 Redefine input occurrence data.
