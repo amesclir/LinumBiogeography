@@ -3662,8 +3662,6 @@ if (runslow)
 ```
 
 
------29.01.2019----------------
-
 
 42. Run DIVALIKE + j with dispersal rates
 
@@ -3773,6 +3771,8 @@ if (runslow)
 
 
 ```
+
+
 
 43. Plotting additional results with dispersal rates
 
@@ -3965,10 +3965,11 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restablew_AIC
 
 
 0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+31.01.2019
+0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
 
 
-
-
+End of first approach.
 
 
 
