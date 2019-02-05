@@ -20,7 +20,7 @@ L_bungei	010000000
 L_campanulatum	100000000
 L_capitatum	100000000
 L_cariense	010000000
-L_catharticum	110000111
+L_catharticum	110000000
 L_comptonii	000001000
 L_corymbiferum	000100000
 L_corymbulosum	010000000
@@ -60,7 +60,7 @@ L_obtusatum	010000000
 L_oligophyllum	000000010
 L_olympicum	010000000
 L_pallescens	000010000
-L_perenne	110010110
+L_perenne	110010000
 L_prostratum	000000010
 L_pubescens	001000000
 L_punctatum1	100000000
@@ -74,7 +74,7 @@ L_setaceum	100100000
 L_spathulatum	010000000
 L_stelleroides	000010000
 L_striatum	000000100
-L_strictum	111101101
+L_strictum	111100000
 L_subasperifolium	000100000
 L_suffruticosum1	100000000
 L_syriacum	001000000
@@ -87,7 +87,7 @@ L_thunbergii	000001000
 L_tmoleum	010000000
 L_tommasinii	100000000
 L_triflorum	010000000
-L_trigynum	110101001
+L_trigynum	110100000
 L_unguiculatum	010000000
 L_usitatissimum	111100000
 L_velutinum	001000000
@@ -98,7 +98,7 @@ L_virgatum	000100000
 L_virgultorum	010000000
 L_viscosum	100000000
 L_volkensii	000001000
-Ra_linoides	110001101
-Re_indica	010010101
+Ra_linoides	110001000
+Re_indica	000010000
 S_digynum	000000100
 T_sinensis	000010000

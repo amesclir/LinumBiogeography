@@ -1348,8 +1348,8 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restablew_AIC
 
 
 0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
-
-
+START HERE FOR FINAL ANALYSES
+0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
 
 Now we will perform the same analyses with less biogeographical areas (Mediterranean - Med, Bubsaharian-Africa - AF, Assia-Far East including India, China, Japan... - AS, Australia and New Zealand - AU, North America - NAm, South America - SAm)
 
