@@ -2686,6 +2686,16 @@ numstates_from_numareas(numareas=9, maxareas=9, include_null_range=TRUE)
 
 ```
 
+
+-----Final analyses running - 05.02.2019
+
+
+
+
+
+
+
+
 31. Ahora vamos a usar el modelo DEC
 
 ```{r, echo=F}
