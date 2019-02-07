@@ -1598,10 +1598,10 @@ results_object = resDEC
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res2 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges, plotlegend=TRUE)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges, plotlegend=TRUE)
 
 #######################################################
 # Plot ancestral states - DECJ
@@ -1613,10 +1613,10 @@ results_object = resDECj
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
-res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+res1 = plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="text", label.offset=0.5, tipcex=0.4, statecex=0.2, splitcex=0.2, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges, plotlegend=TRUE)
 
 # Pie chart
-plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges)
+plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"), plotwhat="pie", label.offset=0.5, tipcex=0.4, statecex=0.5, splitcex=0.5, titlecex=0.9, plotsplits=TRUE, cornercoords_loc=scriptdir, include_null_range=TRUE, tr=tr, tipranges=tipranges, plotlegend=TRUE)
 
 dev.off()  # Turn off PDF
 
@@ -2787,11 +2787,11 @@ if (runslow)
     res    
 
     save(res, file=resfn)
-    resDEC = res
+    resDECm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDEC = res
+    resDECm = res
     }
 
 
@@ -2878,11 +2878,11 @@ if (runslow)
 
     save(res, file=resfn)
 
-    resDECj = res
+    resDECjm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDECj = res
+    resDECjm = res
     }
 ```
 
@@ -2903,7 +2903,7 @@ pdf(pdffn, width=7, height=9)
 analysis_titletxt ="BioGeoBEARS DEC on Linum M0_unconstrained_mediterranean"
 
 # Setup
-results_object = resDEC
+results_object = resDECm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -2918,7 +2918,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_unconstrained_mediterranean"
 
 # Setup
-results_object = resDECj
+results_object = resDECjm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -3008,11 +3008,11 @@ if (runslow)
     res    
 
     save(res, file=resfn)
-    resDIVALIKE = res
+    resDIVALIKEm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDIVALIKE = res
+    resDIVALIKEm = res
     }
 
 ```
@@ -3109,11 +3109,11 @@ if (runslow)
 
     save(res, file=resfn)
 
-    resDIVALIKEj = res
+    resDIVALIKEjm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDIVALIKEj = res
+    resDIVALIKEjm = res
     }
 
 
@@ -3132,7 +3132,7 @@ pdf(pdffn, width=7, height=9)
 analysis_titletxt ="BioGeoBEARS DIVALIKE on Linum M0_unconstrained_mediterranean"
 
 # Setup
-results_object = resDIVALIKE
+results_object = resDIVALIKEm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -3147,7 +3147,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 analysis_titletxt ="Linum DIVALIKE+J on Linum M0_unconstrained_mediterranean"
 
 # Setup
-results_object = resDIVALIKEj
+results_object = resDIVALIKEjm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -3199,8 +3199,8 @@ teststable = NULL
 #######################################################
 # We have to extract the log-likelihood differently, depending on the 
 # version of optim/optimx
-LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDEC)
-LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDECj)
+LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDECm)
+LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDECjm)
 
 numparams1 = 3
 numparams2 = 2
@@ -3208,9 +3208,9 @@ stats = AICstats_2models(LnL_1, LnL_2, numparams1, numparams2)
 stats
 
 # DEC, null model for Likelihood Ratio Test (LRT)
-res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDEC, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 # DEC+J, alternative model for Likelihood Ratio Test (LRT)
-res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECj, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECjm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 
 # The null hypothesis for a Likelihood Ratio Test (LRT) is that two models
 # confer the same likelihood on the data. See: Brian O'Meara's webpage:
@@ -3228,8 +3228,8 @@ teststable = rbind(teststable, tmp_tests)
 #######################################################
 # We have to extract the log-likelihood differently, depending on the 
 # version of optim/optimx
-LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKE)
-LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEj)
+LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEm)
+LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEjm)
 
 numparams1 = 3
 numparams2 = 2
@@ -3237,9 +3237,9 @@ stats = AICstats_2models(LnL_1, LnL_2, numparams1, numparams2)
 stats
 
 # DIVALIKE, null model for Likelihood Ratio Test (LRT)
-res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKE, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 # DIVALIKE+J, alternative model for Likelihood Ratio Test (LRT)
-res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEj, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEjm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 
 rbind(res2, res1)
 conditional_format_table(stats)
@@ -3295,7 +3295,7 @@ AICtable = calc_AICc_column(LnL_vals=restable$LnL, nparam_vals=restable$numparam
 restable2 = cbind(restable2, AICtable)
 restable_AICc_rellike = AkaikeWeights_on_summary_table(restable=restable2, colname_to_use="AIC")
 restable_AICc_rellike
-free_params = row.names(resDECj$output@params_table[resDECj$output@params_table$type=="free",])
+free_params = row.names(resDECjm$output@params_table[resDECjm$output@params_table$type=="free",])
 names(restable_AICc_rellike) = c("LnL", "numparams", free_params, "AICc", "AICc_wt")
 
 # Also save to text files
@@ -3422,11 +3422,11 @@ if (runslow)
     res    
 
     save(res, file=resfn)
-    resDECc = res
+    resDECcm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDECc = res
+    resDECcm = res
     }
 
 
@@ -3520,11 +3520,11 @@ if (runslow)
 
     save(res, file=resfn)
 
-    resDECjc = res
+    resDECjcm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDECjc = res
+    resDECjcm = res
     }
 ```
 
@@ -3546,7 +3546,7 @@ pdf(pdffn, width=7, height=9)
 analysis_titletxt ="BioGeoBEARS DEC on Linum M0_constrained_med"
 
 # Setup
-results_object = resDECc
+results_object = resDECcm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -3561,7 +3561,7 @@ plot_BioGeoBEARS_results(results_object, analysis_titletxt, addl_params=list("j"
 analysis_titletxt ="BioGeoBEARS DEC+J on Linum M0_constrained_med"
 
 # Setup
-results_object = resDECjc
+results_object = resDECjcm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -3659,11 +3659,11 @@ if (runslow)
     res    
 
     save(res, file=resfn)
-    resDIVALIKEc = res
+    resDIVALIKEcm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDIVALIKEc = res
+    resDIVALIKEcm = res
     }
 
 ```
@@ -3769,11 +3769,11 @@ if (runslow)
 
     save(res, file=resfn)
 
-    resDIVALIKEjc = res
+    resDIVALIKEjcm = res
     } else {
     # Loads to "res"
     load(resfn)
-    resDIVALIKEjc = res
+    resDIVALIKEjcm = res
     }
 
 
@@ -3794,7 +3794,7 @@ pdf(pdffn, width=7, height=9)
 analysis_titletxt ="BioGeoBEARS DIVALIKE on Linum M0_constrained_med"
 
 # Setup
-results_object = resDIVALIKEc
+results_object = resDIVALIKEcm
 scriptdir = np(system.file("extdata/a_scripts", package="BioGeoBEARS"))
 
 # States
@@ -3861,8 +3861,8 @@ teststable = NULL
 #######################################################
 # We have to extract the log-likelihood differently, depending on the 
 # version of optim/optimx
-LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDECc)
-LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDECjc)
+LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDECcm)
+LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDECjcm)
 
 numparams1 = 3
 numparams2 = 2
@@ -3870,9 +3870,9 @@ stats = AICstats_2models(LnL_1, LnL_2, numparams1, numparams2)
 stats
 
 # DEC, null model for Likelihood Ratio Test (LRT)
-res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECc, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECcm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 # DEC+J, alternative model for Likelihood Ratio Test (LRT)
-res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECjc, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDECjcm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 
 # The null hypothesis for a Likelihood Ratio Test (LRT) is that two models
 # confer the same likelihood on the data. See: Brian O'Meara's webpage:
@@ -3890,8 +3890,8 @@ teststable = rbind(teststable, tmp_tests)
 #######################################################
 # We have to extract the log-likelihood differently, depending on the 
 # version of optim/optimx
-LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEc)
-LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEjc)
+LnL_2 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEcm)
+LnL_1 = get_LnL_from_BioGeoBEARS_results_object(resDIVALIKEjcm)
 
 numparams1 = 3
 numparams2 = 2
@@ -3899,9 +3899,9 @@ stats = AICstats_2models(LnL_1, LnL_2, numparams1, numparams2)
 stats
 
 # DIVALIKE, null model for Likelihood Ratio Test (LRT)
-res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEc, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res2 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEcm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 # DIVALIKE+J, alternative model for Likelihood Ratio Test (LRT)
-res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEjc, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
+res1 = extract_params_from_BioGeoBEARS_results_object(results_object=resDIVALIKEjcm, returnwhat="table", addl_params=c("j"), paramsstr_digits=4)
 
 rbind(res2, res1)
 conditional_format_table(stats)
@@ -3956,7 +3956,7 @@ AICtable = calc_AICc_column(LnL_vals=restable$LnL, nparam_vals=restable$numparam
 restable2 = cbind(restable2, AICtable)
 restable_AICc_rellike = AkaikeWeights_on_summary_table(restable=restable2, colname_to_use="AIC")
 restable_AICc_rellike
-free_params = row.names(resDECj$output@params_table[resDECj$output@params_table$type=="free",])
+free_params = row.names(resDECjm$output@params_table[resDECjm$output@params_table$type=="free",])
 names(restable_AICc_rellike) = c("LnL", "numparams", free_params, "AICc", "AICc_wt")
 
 # Also save to text files
