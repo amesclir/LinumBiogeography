@@ -2934,8 +2934,6 @@ dev.off()  # Turn off PDF
 ```
 
 
----------06.02.2019------
-
 
 34. Run DIVA like
 
@@ -3313,6 +3311,9 @@ write.table(conditional_format_table(restable_AICc_rellike), file="restable_medi
 
 
 End of the first approach: DEC, DEC+J, DIVALIKE and DIVALIKE+J without dispersal multipliers.
+
+
+--------------07.02.2019----------
 
 
 38. Now we are going to use the model DEC with dispersal multipliers allowing the dispersal matrix to be modified by extra parameter -w
